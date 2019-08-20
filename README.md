@@ -9,7 +9,7 @@ response = requests.get(url,timeout=2)
    
 
 `````
-# Python script to fetch the staus code of the websites and the time taken to execute the code using Request module. 
+## Python script to fetch the staus code of the websites and the time taken to execute the code using Request module. 
 
 ```bash
 
@@ -58,7 +58,7 @@ print('Total Time Taken : {}'.format(total_time))
 `````
 
 
-# Result
+## Result
 
 ```bash
 200 https://www.redhat.com
@@ -74,8 +74,22 @@ Total Time Taken : 13.57437252998352
 
 ````
 
+# Threding in Python
 
-# python script to fetch the staus code of the websites and the time taken to execute the code using threading. 
+Threading in python is used to run multiple threads (tasks, function calls) at the same time.
+
+To create a new thread, we create an object of Thread class. It takes following arguments: target: the function to be executed by thread.
+
+```bash
+
+import threading
+t = threading.Thread(target=getStatus,args=(url,))
+t.start()
+
+````
+
+
+## python script to fetch the staus code of the websites and the time taken to execute the code using threading. 
 
 ```bash
 
@@ -135,7 +149,7 @@ print('Total Time Taken : {}'.format(total_time))
 
 ````
 
-# Result
+## Result
 
 ```bash
 
@@ -152,13 +166,3 @@ Total Time Taken : 2.601806163787842
 
 ````
 
-#Threding in Python
-
-Threading in python is used to run multiple threads (tasks, function calls) at the same time.
-
-To create a new thread, we create an object of Thread class. It takes following arguments: target: the function to be executed by thread.
-
-t = threading.Thread(target=getStatus,args=(url,))
-t.start()
-
-You can see the difference of the Total Time Taken from both results.
